@@ -1,4 +1,5 @@
 import util
+
 name = input("Ditt navn: ")
 age = util.getInt("Din alder: ")
 city = input("Ditt bosted: ")
