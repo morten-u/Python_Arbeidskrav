@@ -24,5 +24,6 @@ while True:
 
     if sjekk_passord(passwd):
         print("Gyldig passord")
+        break
     else:
         print("Passord må være minimum 8 karakterer, inneholde 1 tall og 1 stor bokstav")
