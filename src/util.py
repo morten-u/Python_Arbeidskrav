@@ -45,3 +45,12 @@ def menu(options: list[str]) -> int:
             continue
 
         return choice - 1
+
+def confirm(prompt: str) -> bool:
+    answer = input(f"{prompt} [J/n]: ")
+
+    if len(answer) == 0 or answer.lower().startswith("j"):
+        return True
+
+    return False
+
