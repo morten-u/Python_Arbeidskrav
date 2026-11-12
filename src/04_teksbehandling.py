@@ -1,13 +1,11 @@
 
-# Det enkleste her hadde vært en egen input for fornavn og etternavn
-# Men usikker på om det var tillat så gjennomfører det slik som her
+fname = input("Fornavn: ")
+lname = input("Etternavn: ")
 
+full_name = f"{fname} {lname}"
 
-full_name = input("Skriv inn ditt fulle navn: ")
-
-print(f"Fult navn: {full_name}")
+print(f"Fullt navn: {full_name}")
 print(f"Store bokstaver: {full_name.upper()}")
-
 
 # Bruker loop over len(), da jeg ikke vet hvor mange navn brukeren skriver inn
 # Eksempel: Ole Eriksen eller Ole Christian Eriksen
@@ -17,7 +15,6 @@ for c in full_name:
         continue
     char_count += 1
 
-
 print(f"Antall bokstaver i navn: {char_count}")
 
-print(f"{full_name[:3]}")
+print(f"Tre første bokstaver i fornavn: {fname[:3]}")

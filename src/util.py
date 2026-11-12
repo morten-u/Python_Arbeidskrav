@@ -1,5 +1,6 @@
 
-
+# returnerer ett heltall
+# om bruker gir ugyldig input, blir bruker spurt på nytt
 def get_int(prompt: str) -> int:
 
     while True:
@@ -12,6 +13,8 @@ def get_int(prompt: str) -> int:
         except ValueError:
             print(f"Error: '{inn}' er ikke et gyldig heltall")
 
+# returnerer ett tall
+# om bruker gir ugyldig input, blir bruker spurt på nytt
 def get_float(prompt: str) -> float:
 
     while True:
@@ -25,10 +28,14 @@ def get_float(prompt: str) -> float:
         except ValueError:
             print(f"Error: '{inn}' er ikke et gyldig tall")
 
+
+# Jeg bruker 'Ansi escape' koder for å slette i terminalen
+# du finner de her https://gist.github.com/SleepTheGod/8f2a81775fd381ee4eccc15a50ec7f3b
 # Tøm terminalen: \esc[H  = sender markøren til start
 #                 \esc[2J = tømmer terminalen
 def clear():
     print("\x1b[H\x1b[2J")
+
 
 # Returnerer indexen til valget
 def menu(options: list[str]) -> int:
@@ -46,6 +53,8 @@ def menu(options: list[str]) -> int:
 
         return choice - 1
 
+# spør bruker om bekreftelse, svar med ja eller nei
+# nei returnerer false, ja returnerer true
 def confirm(prompt: str) -> bool:
     answer = input(f"{prompt} [J/n]: ")
 
