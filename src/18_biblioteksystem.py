@@ -23,17 +23,17 @@ class Book:
         self.available = True
         pass
 
-    def toString(self) -> str:
+    def to_string(self) -> str:
         available_str = "Ja"
         if not self.available:
             available_str = "Nei"
 
         return f"Navn: {self.name}\nForfatter: {self.author}\nTilgjengelig: {available_str}"
 
-    def borrowBook(self):
+    def borrow_book(self):
         self.available = False
 
-    def returnBook(self):
+    def return_book(self):
         self.available = True
 
 inventory = [
@@ -45,7 +45,7 @@ inventory = [
     Book("Krig og fred", "Lev Tolstoj")
 ]
 
-def findBook(book_name: str) -> Book | None:
+def find_book(book_name: str) -> Book | None:
     global inventory
 
     for book in inventory:
@@ -55,16 +55,16 @@ def findBook(book_name: str) -> Book | None:
     return None
 
 
-def showAll():
+def show_all():
     global inventory
 
     util.clear()
     for book in inventory:
-        print(book.toString())
+        print(book.to_string())
         print("---")
     input("Press enter for å gå tilbake")
 
-def borrowBook():
+def borrow_book():
     global inventory
     util.clear()
 
@@ -83,7 +83,7 @@ def borrowBook():
 
     name = input("Skriv navnet på boken du ønsker å låne: ")
 
-    book = findBook(name)
+    book = find_book(name)
 
     if not book:
         print(f"{name}: ikke funnet")
@@ -101,7 +101,7 @@ def borrowBook():
 
     input("Press enter for å gå tilbake")
 
-def returnBook():
+def return_book():
     global inventory
 
     util.clear()
@@ -121,7 +121,7 @@ def returnBook():
 
     name = input("Skriv navnet på boken du skal returnere: ")
 
-    book = findBook(name)
+    book = find_book(name)
 
     if not book:
         print(f"{name}: ikke funnet")
@@ -138,7 +138,7 @@ def returnBook():
         book.available = True
         return
 
-def showAvailable():
+def show_available():
     global inventory
 
     util.clear()
@@ -146,7 +146,7 @@ def showAvailable():
     for book in inventory:
         
         if book.available:
-            print(book.toString())
+            print(book.to_string())
             print("---")
     print()
     input("Press enter for å gå tilbake")
@@ -159,12 +159,12 @@ while True:
     choice = Opt(util.menu(options))
 
     if choice == Opt.VIS_ALLE_BØKER:
-        showAll()
+        show_all()
     elif choice == Opt.LÅN_EN_BOK:
-        borrowBook()
+        borrow_book()
     elif choice == Opt.LEVER_TILBAKE:
-        returnBook()
+        return_book()
     elif choice == Opt.VIS_TILGJENGELIG:
-        showAvailable()
+        show_available()
     elif choice == Opt.AVSLUTT:
         break

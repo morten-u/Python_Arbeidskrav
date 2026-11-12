@@ -4,7 +4,7 @@ numb: int = 0
 
 while True:
 
-    numb = util.getInt("Skriv inn ett positivt heltall: ")
+    numb = util.get_int("Skriv inn ett positivt heltall: ")
 
     if numb < 0:
         print("Tallet må være positivt.")

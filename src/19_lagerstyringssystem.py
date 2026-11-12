@@ -89,7 +89,7 @@ def sell_product():
         input("Press enter for å returnere: ")
         return
 
-    antall = util.getInt("Skriv inn antall som skal selges: ")
+    antall = util.get_int("Skriv inn antall som skal selges: ")
 
     if antall < 0:
         print("Kan ikke selge negativt")
@@ -120,7 +120,7 @@ def fill_storage():
         input("Press enter for å returnere: ")
         return
 
-    antall = util.getInt("Skriv antall du ønsker å fylle på: ")
+    antall = util.get_int("Skriv antall du ønsker å fylle på: ")
     if antall < 0:
         print("antall må være mer en 0")
         input("Press enter for å returnere: ")

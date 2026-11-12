@@ -9,19 +9,19 @@ options = [
 
 balance: float = 1000
 
-def showBalance():
+def show_balance():
     util.clear()
     print("--- VIS SALDO ---")
     print(f"Saldo: {balance}")
     input("Press enter for å returnere")
 
-def addToBalance():
+def add_to_balance():
     global balance
     util.clear()
     print("--- SETT INN PENGER ---")
 
     while True:
-        add = util.getFloat("Sum: ")
+        add = util.get_float("Sum: ")
 
         if add < 0:
             print("Sum kan ikke være negativ.")
@@ -30,13 +30,13 @@ def addToBalance():
         balance += add
         break
 
-def withdrawFromBalance():
+def withdraw_from_balance():
     global balance
     util.clear()
     print("--- TA UT PENGER ---")
 
     while True:
-        sub = util.getFloat("Sum: ")
+        sub = util.get_float("Sum: ")
         if sub > balance:
             print(f"Kan ikke ta ut mer en {balance}")
             continue
@@ -54,10 +54,10 @@ while True:
     choice = util.menu(options)
     match choice:
         case 0: # Vis saldo
-            showBalance()
+            show_balance()
         case 1: # Sett inn penger
-            addToBalance()
+            add_to_balance()
         case 2: # Ta ut penger
-            withdrawFromBalance()
+            withdraw_from_balance()
         case 3: # Avslutt
             break

@@ -45,12 +45,12 @@ while True:
     choice = util.menu(options)
 
     if options[choice] == "Sett inn penger":
-        amount = util.getFloat("Beløp: ")
+        amount = util.get_float("Beløp: ")
         account.sett_inn(amount)
         input("Press enter for å fortsette")
         continue
     elif options[choice] == "Ta ut penger":
-        amount = util.getFloat("Beløp: ")
+        amount = util.get_float("Beløp: ")
         account.ta_ut(amount)
         input("Press enter for å fortsette")
         continue

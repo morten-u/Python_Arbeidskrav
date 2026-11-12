@@ -1,7 +1,7 @@
 import util
 
 name = input("Ditt navn: ")
-age = util.getInt("Din alder: ")
+age = util.get_int("Din alder: ")
 city = input("Ditt bosted: ")
 
 print(f"Navn: {name}, Alder: {age}, Bosted: {city}")

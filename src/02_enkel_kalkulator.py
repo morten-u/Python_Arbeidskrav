@@ -12,8 +12,8 @@ def multiplikasjon(n1: float, n2: float) -> float:
 def divisjon(n1: float, n2: float) -> float:
     return n1 / n2
 
-numb1 = util.getFloat("Skriv inn første tall: ")
-numb2 = util.getFloat("Skriv inn andre tall: ")
+numb1 = util.get_float("Skriv inn første tall: ")
+numb2 = util.get_float("Skriv inn andre tall: ")
 
 options = [
     "Addisjon",

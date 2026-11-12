@@ -4,7 +4,7 @@ score = 0
 
 while True:
 
-    score = util.getFloat("Skriv inn din poengsum: ")
+    score = util.get_float("Skriv inn din poengsum: ")
 
     if score < 0 or score > 100:
         print("Poengsum må være mellom 0 - 100")

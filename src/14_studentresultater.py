@@ -20,7 +20,7 @@ score_list: list[float] = []
 
 for i in range(5):
     name_list.append(input("Navn: "))
-    score_list.append(util.getFloat("Poeng: "))
+    score_list.append(util.get_float("Poeng: "))
 
 print(f"Snitt: {beregn_snitt(score_list)}")
 print(f"Beste elev: {finn_beste(name_list, score_list)}")

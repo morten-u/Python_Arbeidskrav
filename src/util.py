@@ -1,6 +1,6 @@
 
 
-def getInt(prompt: str) -> int:
+def get_int(prompt: str) -> int:
 
     while True:
 
@@ -12,7 +12,7 @@ def getInt(prompt: str) -> int:
         except ValueError:
             print(f"Error: '{inn}' er ikke et gyldig heltall")
 
-def getFloat(prompt: str) -> float:
+def get_float(prompt: str) -> float:
 
     while True:
 
@@ -38,7 +38,7 @@ def menu(options: list[str]) -> int:
         for i, opt in enumerate(options):
             print(f"{i + 1}. {opt}")
 
-        choice = getInt(f"Velg (1 - {len(options)}): ")
+        choice = get_int(f"Velg (1 - {len(options)}): ")
 
         if choice <= 0 or choice > len(options):
             print(f"Valg må være mellom 1 og {len(options)}")
@@ -54,3 +54,8 @@ def confirm(prompt: str) -> bool:
 
     return False
 
+
+def header(title: str):
+    clear()
+    print(title)
+    print()
